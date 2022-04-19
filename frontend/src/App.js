@@ -1,7 +1,6 @@
 import './App.css';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Layout from './components/Layout';
-import Sidebar from './components/Sidebar';
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -20,7 +19,7 @@ function App({userInfo}) {
   return (
     <Router>
       <Home>
-        <Sidebar />
+        <Layout />
         <Switch>
           <Route path="/about-us" exact component={AboutUs} />
           <Route path="/about-us/aim" exact component={OurAim} />
