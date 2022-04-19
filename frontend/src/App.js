@@ -1,11 +1,12 @@
 import './App.css';
 import Layout from './components/Layout';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import SectionList from './components/sectionlist/SectionList';
+
 
 function App() {
   return (
     <div className="App">
-      <Layout/>
+      <SectionList />
     </div>
   );
 }
