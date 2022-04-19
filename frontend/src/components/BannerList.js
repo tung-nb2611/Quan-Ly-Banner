@@ -12,8 +12,9 @@ const BannerList = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
 
-  // Ở đây dữ liệu nhận được từ API call đã được phân theo trang sẵn, chỉ cần lấy thông tin số trang và trang hiện tại từ 
-  // dữ liệu nhận về là được
+  // Ở đây dữ liệu nhận được từ API call đã được phân theo trang sẵn ở phần backend, chỉ cần lấy thông tin số trang
+  // và trang hiện tại từ dữ liệu nhận về là được
+   
   useEffect(() => {
     axios.get(BASE_URL + currentPage).then((response) => {
 
