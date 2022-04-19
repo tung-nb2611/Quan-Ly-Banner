@@ -12,10 +12,17 @@ const BannerList = () => {
   const [pageNumber, setPageNumber] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
 
+  // Ở đây dữ liệu nhận được từ API call đã được phân theo trang sẵn, chỉ cần lấy thông tin số trang và trang hiện tại từ 
+  // dữ liệu nhận về là được
   useEffect(() => {
     axios.get(BASE_URL + currentPage).then((response) => {
+
+      // Lấy thông tin banner
       const data = response.data.content;
+      // Lấy thông tin tổng số trang
       const pageNum = response.data.totalPages;
+
+
       setBannerList(data);
       setPageNumber(pageNum);
 
@@ -25,7 +32,7 @@ const BannerList = () => {
   const displayBanner = bannerList.map((bannerInfo) => {
     return <BannerInfo bannerInfo={bannerInfo} key={bannerInfo.id} bannerList={bannerList}/>;
   });
-
+  
   return (
     <div>
       <Container>
