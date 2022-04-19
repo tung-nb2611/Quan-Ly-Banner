@@ -80,7 +80,7 @@ public class BannerController {
     }
 
     // Lay thong tin theo trang
-    @GetMapping("/banner/page/{number}")
+    @GetMapping("/banners/page/{number}")
     public ResponseEntity<Page<BannerEntity>> getBannerPage(@PathVariable(value="number") int number){
         try{
             Page<BannerEntity> banners = bannerService.getBannerPage(number);

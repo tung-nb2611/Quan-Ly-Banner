@@ -1,4 +1,11 @@
 .banner-info{
     color: white;
-    background-color: aqua;
+    background-color: green;
+    margin: 5px;
+    padding: 5px;
+}
+
+img{
+    width: 100%;
+    max-height: 20vh;
 }
