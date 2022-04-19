@@ -19,14 +19,13 @@ const BannerList = () => {
 
       // Lấy thông tin banner
       const data = response.data.content;
-      // Lấy thông tin tổng số trang
+      // Lấy thông tin tổng số trang 
       const pageNum = response.data.totalPages;
-
 
       setBannerList(data);
       setPageNumber(pageNum);
 
-    });
+    }); 
   }, [currentPage]);   
 
   const displayBanner = bannerList.map((bannerInfo) => {
