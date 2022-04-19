@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+// import NavBar from "../NavBar";
+import Sidebar from "./Sidebar";
 
-function Layout() {
+
+const Layout = React.memo((props) => {
   return (
-    <div>Layout</div>
-  )
-}
+    <>
+      {/* <NavBar 
+        userID={props.userID} 
+        socket={props.socket} 
+        logOutHandler={props.logOutHandler} 
+      /> */}
+      <Sidebar />
+      {props.children}
+    </>
+  );
+});
 
-export default Layout
+export default Layout;
