@@ -49,6 +49,8 @@ public class BannerController {
     @PostMapping("/banners")
     public ResponseEntity<BannerEntity> addBanner(@RequestBody BannerEntity bannerEntity){
         try {
+
+            bannerEntity.setId(0);
             bannerService.save(bannerEntity);
             return new ResponseEntity<BannerEntity>(bannerEntity, HttpStatus.OK);
         }catch (NoSuchElementException e){
