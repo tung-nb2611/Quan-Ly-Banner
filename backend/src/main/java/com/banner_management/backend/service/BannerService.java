@@ -40,11 +40,7 @@ public class BannerService  {
 
         }
     }
-    public Page<BannerEntity> getBannerPage(int number) {
-        PagingAndSortingRepository<BannerEntity, Integer> bannerRepository = repository;
-        Page<BannerEntity> banners = bannerRepository.findAll(PageRequest.of(number, 5));
-        return banners;
-    }
+
 
     public Page<BannerEntity> getBannerPage(int number) {
         PagingAndSortingRepository<BannerEntity, Integer> bannerRepository = repository;

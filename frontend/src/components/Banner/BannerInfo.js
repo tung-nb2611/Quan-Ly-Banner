@@ -1,7 +1,6 @@
 import "../../style/bannerInfo.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import axios from "axios";
-import { useState } from "react";
 
 const BASE_URL = "http://localhost:8080/api/banners/";
 
@@ -18,7 +17,6 @@ const BannerInfo = ({ bannerInfo, bannerList, setBannerList }) => {
         .then(() => console.log("Delete successful"));
         //bannerList.filter(info => info.id === bannerInfo.id);
         setBannerList(bannerList.filter(info => info.id !== bannerInfo.id));
-
     }
   };
   const updateBanner = () => {

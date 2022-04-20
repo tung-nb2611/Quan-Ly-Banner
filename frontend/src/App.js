@@ -1,33 +1,16 @@
-import './App.css';
-import BannerList from './components/banner/BannerList';
-import BannerManage from './pages/BannerManage';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Layout from './components/dashboard/Layout';
-import Sidebar from './components/dashboard/Sidebar';
-import styled from "styled-components";
-import Sidebar from './components/Sidebar';
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "./App.css";
+import BannerManage from "./pages/BannerManage";
+import Sidebar from "./components/dashboard/Sidebar";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { AboutUs, OurAim, OurVision } from "./pages/AboutUs";
-import {
-  Services,
-  ServicesOne,
-  ServicesTwo,
-  ServicesThree,
-} from "./pages/Services";
+import { Services } from "./pages/Services";
 import { Events, EventsOne, EventsTwo } from "./pages/Events";
 import Contact from "./pages/ContactUs";
 import Support from "./pages/Support";
-  ServicesThree,
-} from "./pages/Services";
-import { Events, EventsOne, EventsTwo } from "./pages/Events";
-import Contact from "./pages/ContactUs";
-import Support from "./pages/Support";
-import CreateBanner from './components/banner/CreateBanner';
-import UpdateBanner from './components/banner/UpdateBanner';
+import CreateBanner from "./components/banner/CreateBanner";
+import UpdateBanner from "./components/banner/UpdateBanner";
 
 function App({ userInfo }) {
   return (
@@ -39,6 +22,7 @@ function App({ userInfo }) {
           <Route path="/about-us/aim" exact component={OurAim} />
           <Route path="/about-us/vision" exact component={OurVision} />
           <Route path="/services" exact component={Services} />
+          <Route path="/banner/manage" exact component={BannerManage} />
           <Route path="/banner/create" exact component={CreateBanner} />
           <Route path="/banner/update" exact component={UpdateBanner} />
           <Route path="/banner/delete" exact component={CreateBanner} />
@@ -50,13 +34,10 @@ function App({ userInfo }) {
         </Switch>
       </Home>
     </Router>
-    </Router>
   );
 }
-export const Home = styled.div `
+export const Home = styled.div`
   display: flex;
 `;
 
 export default App;
-
-

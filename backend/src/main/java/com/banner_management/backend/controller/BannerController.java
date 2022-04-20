@@ -31,6 +31,7 @@ public class BannerController {
     // lấy danh sách các banner
     @GetMapping("/banners")
     public List<BannerEntity> listBanner() {
+        System.out.println("dfsdaf");
         return bannerService.listAllBanner();
     }
 
@@ -84,8 +85,11 @@ public class BannerController {
     // Lay thong tin theo trang
     @GetMapping("/banners/page/{number}")
     public ResponseEntity<Page<BannerEntity>> getBannerPage(@PathVariable(value="number") int number){
+        System.out.println("1");
         try{
+            System.out.println("2");
             Page<BannerEntity> banners = bannerService.getBannerPage(number);
+            System.out.println("3");
             return new ResponseEntity<>(banners, HttpStatus.OK);
         } catch(NoSuchElementException e){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
