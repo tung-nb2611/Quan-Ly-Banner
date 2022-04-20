@@ -13,31 +13,36 @@ public class BannerEntity {
     private int id;
 
     @Column(name = "code" , nullable = false, length = 255)
-    @NotNull
+//    @NotNull
     private String code;
 
     @Column(name = "section_id")
-    @NotNull
     private int sectionID;
 
     @Column(name = "name")
-    @NotNull
+//    @NotNull
     private String name;
 
     @Column(name = "img_url")
-    @NotNull
+//    @NotNull
     private String imgUrl;
 
     @Column(name = "state")
-    @NotNull
     private short state;
 
     @Column(name = "expired")
-    @NotNull
+//    @NotNull
     private Date expired;
 
+    @Column(name = "user_add")
+//    @NotNull
+    private String userAdd;
+
+    @Column(name = "user_fix")
+    private String userFix;
+
     @Column(name = "create_at")
-    @NotNull
+//    @NotNull
     private Date createAt;
 
     @Column(name = "modified_at")
@@ -45,6 +50,40 @@ public class BannerEntity {
 
     public BannerEntity() {
     }
+    @Override
+    public String toString() {
+        return "BannerEntity{" +
+                "id=" + id +
+                ", code='" + code + '\'' +
+                ", sectionID=" + sectionID +
+                ", name='" + name + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", state=" + state +
+                ", expired=" + expired +
+                ", userAdd='" + userAdd + '\'' +
+                ", userFix='" + userFix + '\'' +
+                ", createAt=" + createAt +
+                ", modifiedAt=" + modifiedAt +
+                '}';
+    }
+
+    public String getUserAdd() {
+        return userAdd;
+    }
+
+    public void setUserAdd(String userAdd) {
+        this.userAdd = userAdd;
+    }
+
+    public String getUserFix() {
+        return userFix;
+    }
+
+    public void setUserFix(String userFix) {
+        this.userFix = userFix;
+    }
+
+
 
     public int getId() {
         return id;
@@ -118,18 +157,4 @@ public class BannerEntity {
         this.modifiedAt = modifiedAt;
     }
 
-    @Override
-    public String toString() {
-        return "BannerEntity{" +
-                "id=" + id +
-                ", code='" + code + '\'' +
-                ", sectionID=" + sectionID +
-                ", name='" + name + '\'' +
-                ", imgUrl='" + imgUrl + '\'' +
-                ", state=" + state +
-                ", expired=" + expired +
-                ", createAt=" + createAt +
-                ", modifiedAt=" + modifiedAt +
-                '}';
-    }
 }
