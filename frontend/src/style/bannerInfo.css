@@ -1,11 +1,17 @@
-.banner-info{
+/* .banner-info{
     color: white;
     background-color: green;
     margin: 5px;
     padding: 5px;
+    width: 100%;
+}
+
+.image-container{
+    width: 400px;
 }
 
 img{
+    height: 100%;
     width: 100%;
-    max-height: 20vh;
-}
+    object-fit: cover;
+} */

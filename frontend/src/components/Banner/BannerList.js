@@ -34,8 +34,8 @@ const BannerList = () => {
   });
   
   return (
-    <div>
-      <Container>
+    <div className="banner-list">
+      <Container >
         <Row>
           <Col sm={12} lg={10}>
             {displayBanner}

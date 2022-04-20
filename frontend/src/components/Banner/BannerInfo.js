@@ -28,24 +28,24 @@ const BannerInfo = ({ bannerInfo, bannerList }) => {
     <div className="banner-info">
       <Container>
         <Row>
-          <Col xs={6} lg={3} xl={1}>
+          <Col xs={3} lg={3} xl={1}>
             <p>Id</p>
             <p>{bannerInfo.code}</p>
           </Col>
-          <Col xs={6} lg={3} xl={2}>
+          <Col xs={3} lg={3} xl={2}>
             <p>Name</p>
             <p>{bannerInfo.name}</p>
           </Col>
-          <Col xs={6} lg={3} xl={1}>
+          <Col xs={3} lg={3} xl={1}>
             <p>State</p>  
             <p>{bannerInfo.state}</p>
           </Col>
-          <Col xs={12} lg={12} xl={5}>
+          <Col xs={12} lg={12} xl={5} className="image-container">
             <Image
               src="https://mdbootstrap.com/img/new/slides/041.webp"
             />
           </Col>
-          <Col xs={12} lg={3} xl={2}>
+          <Col xs={3} lg={3} xl={2} className="button-choice">
             <button onClick={deleteConfirmation}>Delete</button>
             <button onClick={updateBanner}>Update</button>
           </Col>
