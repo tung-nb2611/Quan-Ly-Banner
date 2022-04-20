@@ -7,6 +7,7 @@ import com.banner_management.backend.entity.BannerEntity;
 import com.banner_management.backend.service.BannerService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -74,6 +75,16 @@ public class BannerController {
             bannerService.delete(id);
             return new ResponseEntity<>(HttpStatus.OK);
         }catch (NoSuchElementException e){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+    // Lay thong tin theo trang
+    @GetMapping("/banners/page/{number}")
+    public ResponseEntity<Page<BannerEntity>> getBannerPage(@PathVariable(value="number") int number){
+        try{
+            Page<BannerEntity> banners = bannerService.getBannerPage(number);
+            return new ResponseEntity<>(banners, HttpStatus.OK);
+        } catch(NoSuchElementException e){
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
