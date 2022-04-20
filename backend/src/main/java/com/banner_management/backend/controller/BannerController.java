@@ -64,6 +64,7 @@ public class BannerController {
     public ResponseEntity<BannerEntity> updateBannerById (@RequestBody BannerEntity bannerEntity, @PathVariable Integer id){
         try{
             BannerEntity existBannerEntity = bannerService.getById(id);
+            bannerEntity.setId(existBannerEntity.getId());
             bannerService.save(bannerEntity);
             return new ResponseEntity<BannerEntity>(bannerEntity, HttpStatus.OK);
         }catch (NoSuchElementException e){
