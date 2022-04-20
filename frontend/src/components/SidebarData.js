@@ -19,7 +19,7 @@ export const SidebarData = [
 },
 {
 	title: "Quản lý banner",
-	path: "/Banner_manage",
+	path: "/services/banner_manage",
 	icon: <MdIcons.MdPictureInPicture size={24}/>,
 	iconClosed: <BiIcons.BiChevronRight size={24}/>,
 	iconOpened: <BiIcons.BiChevronDown size={24}/>,

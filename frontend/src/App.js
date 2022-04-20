@@ -1,5 +1,6 @@
 import './App.css';
-import BannerList from './components/BannerList';
+import BannerList from './components/banner/BannerList';
+import BannerManage from './pages/BannerManage';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Layout from './components/Layout';
 import Sidebar from './components/Sidebar';
@@ -20,7 +21,6 @@ import Support from "./pages/Support";
 function App({userInfo}) {
   return (
     <Router>
-      <BannerList/>
       <Home>
         <Sidebar />
         <Switch>
@@ -28,6 +28,7 @@ function App({userInfo}) {
           <Route path="/about-us/aim" exact component={OurAim} />
           <Route path="/about-us/vision" exact component={OurVision} />
           <Route path="/services" exact component={Services} />
+          <Route path="/services/banner_manage" exact component={BannerManage}/>
           <Route path="/services/services1" exact component={ServicesOne} />
           <Route path="/services/services2" exact component={ServicesTwo} />
           <Route path="/services/services3" exact component={ServicesThree} />
