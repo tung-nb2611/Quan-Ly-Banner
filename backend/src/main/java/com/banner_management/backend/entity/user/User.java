@@ -1,4 +1,4 @@
-package com.banner_management.backend.entity;
+package com.banner_management.backend.entity.user;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.banner_management.backend.entity;
+package com.banner_management.backend.entity.banner;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

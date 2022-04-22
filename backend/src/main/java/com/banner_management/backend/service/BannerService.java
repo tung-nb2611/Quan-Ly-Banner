@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 
 import javax.transaction.Transactional;
 
-import com.banner_management.backend.entity.BannerEntity;
+import com.banner_management.backend.entity.banner.BannerEntity;
 import com.banner_management.backend.repository.BannerRepositoty;
 
 import org.springframework.beans.factory.annotation.Autowired;

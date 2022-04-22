@@ -1,11 +1,11 @@
 package com.banner_management.backend.repository;
 
-import com.banner_management.backend.entity.SectionEntity;
-
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
+
+import com.banner_management.backend.entity.banner.SectionEntity;
 
 public interface SectionRepository extends JpaRepository<SectionEntity, Integer> {
 

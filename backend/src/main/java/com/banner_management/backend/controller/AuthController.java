@@ -7,9 +7,9 @@ import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
-import com.banner_management.backend.entity.ERole;
-import com.banner_management.backend.entity.Role;
-import com.banner_management.backend.entity.User;
+import com.banner_management.backend.entity.user.ERole;
+import com.banner_management.backend.entity.user.Role;
+import com.banner_management.backend.entity.user.User;
 import com.banner_management.backend.payload.request.LoginRequest;
 import com.banner_management.backend.payload.request.SignupRequest;
 import com.banner_management.backend.payload.response.JwtResponse;

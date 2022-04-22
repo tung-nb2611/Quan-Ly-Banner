@@ -1,8 +1,7 @@
-package com.banner_management.backend.entity;
+package com.banner_management.backend.entity.banner;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.sql.Date;
 
 @Table(name = "banners")

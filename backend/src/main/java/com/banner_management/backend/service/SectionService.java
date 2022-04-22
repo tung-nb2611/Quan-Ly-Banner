@@ -1,6 +1,6 @@
 package com.banner_management.backend.service;
 
-import com.banner_management.backend.entity.SectionEntity;
+import com.banner_management.backend.entity.banner.SectionEntity;
 import com.banner_management.backend.repository.SectionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

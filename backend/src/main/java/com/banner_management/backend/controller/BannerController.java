@@ -3,7 +3,7 @@ package com.banner_management.backend.controller;
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import com.banner_management.backend.entity.BannerEntity;
+import com.banner_management.backend.entity.banner.BannerEntity;
 import com.banner_management.backend.service.BannerService;
 
 import org.springframework.beans.factory.annotation.Autowired;
