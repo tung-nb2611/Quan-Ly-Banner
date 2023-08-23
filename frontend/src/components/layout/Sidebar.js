@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu.js";
 import Logo from './Logo.png'; 
-import './style.css'
+import '../style.css'
 
 //left: ${({ sidebar }) => (sidebar ? "0" : "-100%")};
 const SidebarNav = styled.nav`
